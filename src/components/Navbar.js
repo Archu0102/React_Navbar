@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './NavbarStyle.css'
+import { Link } from 'react-router-dom';
 
 class Navbar extends Component{
   state= {clicked: false};
@@ -14,16 +15,16 @@ class Navbar extends Component{
         <div>
             <ul id='navbar' className={this.state.clicked ? "#navbar active" : "#navbar"} >
                 <li>
-                    <a className='active' href='index.html'>Home</a>
+                    <Link className='active' to='/'>Home</Link>
                 </li>
                 <li>
-                    <a href='index.html'>Shop</a>
+                    <Link to='/shop'>Shop</Link>
                 </li>
                 <li>
-                    <a href='index.html'>About</a>
+                    <Link to='/about'>About</Link>
                 </li>
                 <li>
-                    <a href='index.html'>Contact</a>
+                    <Link to='/contact'>Contact</Link>
                 </li>
             </ul>
         </div>
